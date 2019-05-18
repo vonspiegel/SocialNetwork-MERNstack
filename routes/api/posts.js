@@ -59,4 +59,25 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+//@route  GET api/posts/:id
+//@desc   Get all posts
+//@access Private
+router.get('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    if (!post) {
+      return res.status(404).send({ msg: 'Post not found' });
+    }
+
+    res.json(post);
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind === 'ObjectId') {
+      return res.status(404).send({ msg: 'Post not found' }); //Avoids getting status err when non formatted post ID is written
+    }
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
