@@ -19,4 +19,4 @@ const mapStateToProps = state => ({
   alerts: state.alert
 });
 
-export default connect(mapStateToProps)(Alert); //no actions so no second parameter
+export default connect(mapStateToProps)(Alert); //no actions -> no second parameter
