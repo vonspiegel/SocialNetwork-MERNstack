@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
+import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
 
 const Register = ({ setAlert }) => {
@@ -102,5 +103,5 @@ Register.propTypes = {
 
 export default connect(
   null,
-  { setAlert }
+  { setAlert, register }
 )(Register); //First parameter is the state to map. The second, object of actions
