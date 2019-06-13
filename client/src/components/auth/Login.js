@@ -72,6 +72,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps, //before, null
   { login }
 )(Login);
