@@ -21,7 +21,7 @@ const Dashboard = ({
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Welcome {user && user.name}
-        {/* If user exists then show the username */}
+        {/* Same as: If user exists then show the username */}
       </p>
       {profile !== null ? (
         <Fragment>has</Fragment>
