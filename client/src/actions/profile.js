@@ -26,7 +26,7 @@ export const createProfile = (
   history,
   edit = false
 ) => async dispatch => {
-  // history object has method called push that will redirect
+  // history object has a method called push that will redirect
   try {
     const config = {
       headers: {
