@@ -45,7 +45,18 @@ const EditProfile = ({
       youtube: loading || !profile.social ? '' : profile.social.youtube,
       instagram: loading || !profile.social ? '' : profile.social.instagram
     });
-  }, [getCurrentProfile, loading, profile.bio, profile.company, profile.githubusername, profile.location, profile.skills, profile.social, profile.status, profile.website]);
+  }, [
+    getCurrentProfile,
+    loading,
+    profile.bio,
+    profile.company,
+    profile.githubusername,
+    profile.location,
+    profile.skills,
+    profile.social,
+    profile.status,
+    profile.website
+  ]);
 
   const {
     company,
@@ -246,7 +257,7 @@ const EditProfile = ({
   );
 };
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
