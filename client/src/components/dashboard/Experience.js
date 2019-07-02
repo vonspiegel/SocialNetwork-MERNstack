@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { connect } from 'react-redux';
 
-const Education = ({ experience }) => {
+const Experience = ({ experience }) => {
   const experiences = experience.map(exp => (
     <td key={exp._id}>
       <td>{exp.company}</td>
@@ -40,8 +40,8 @@ const Education = ({ experience }) => {
   );
 };
 
-Education.propTypes = {
+Experience.propTypes = {
   experience: PropTypes.array.isRequired
 };
 
-export default Education;
+export default Experience;
