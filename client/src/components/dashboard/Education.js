@@ -30,6 +30,7 @@ const Education = ({ education }) => {
           <tr>
             <th>School</th>
             <th className='hide-sm'>Degree</th>
+            {/* To hide columns responsively */}
             <th className='hide-sm'>Years</th>
             <th />
           </tr>
