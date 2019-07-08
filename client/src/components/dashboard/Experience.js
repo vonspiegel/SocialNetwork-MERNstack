@@ -10,11 +10,7 @@ const Experience = ({ experience }) => {
       <td className='hide-sm'>{exp.title}</td>
       <td>
         <Moment format='DD/MM/YYY'>{exp.from}</Moment> -{' '}
-        {exp.to === null ? (
-          ' Now'
-        ) : (
-          <Moment format='DD/MM/YYY'>{exp.to}</Moment>
-        )}
+        {exp.to === null ? 'Now' : <Moment format='DD/MM/YYY'>{exp.to}</Moment>}
       </td>
       <td>
         <button className='btn btn-danger'>Delete</button>
