@@ -2,8 +2,8 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
-import ProfileItem from '../layout/Spinner';
-import { getProfiles } from '../profiles/ProfileItem';
+import ProfileItem from './ProfileItem';
+import { getProfiles } from '../../actions/profile';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
@@ -23,7 +23,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </p>
           <div className='profiles'>
             {profiles.length > 0 ? (
-              <ProfileItem key={profile._id} profile={profile} />
+              profiles.map(profile => (
+                <ProfileItem key={profile._id} profile={profile} />
+              ))
             ) : (
               <h4>No profiles found...</h4>
             )}
