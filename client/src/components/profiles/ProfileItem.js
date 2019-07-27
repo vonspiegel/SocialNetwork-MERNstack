@@ -19,6 +19,7 @@ const ProfileItem = ({
         <p>
           {status} {company && <span>at {company}</span>}
         </p>
+        {/* if statement without else part - if there's location, show it */}
         <p className='my-1'>{location && <span>{location}</span>}</p>
         <Link to={`profile/${_id}`} className='btn btn-primary'>
           View profile
