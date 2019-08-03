@@ -42,7 +42,10 @@ const Profile = ({
               {profile.experience.length > 0 ? (
                 <Fragment>
                   {profile.experience.map(experience => (
-                    <ProfileExperience />
+                    <ProfileExperience
+                      key={experience._id}
+                      experience={experience}
+                    />
                   ))}
                 </Fragment>
               ) : (
