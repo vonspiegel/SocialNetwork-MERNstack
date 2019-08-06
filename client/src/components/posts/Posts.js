@@ -9,7 +9,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
     getPosts();
   }, [getPosts]);
 
-  return Posts;
+  return loading ? <Spinner /> : <Fragment>Test</Fragment>;
 };
 
 Posts.propTypes = {
