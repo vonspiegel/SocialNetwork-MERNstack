@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react'; //We need to call that post action
+import React, { Fragment, useEffect } from 'react'; //useEffect because we need to call that post action
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
