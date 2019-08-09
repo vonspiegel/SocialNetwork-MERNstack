@@ -39,6 +39,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-  mapStateToProps,
+  mapStateToProps, //We're gonna be pulling in the post state, mapStateToProps needed
   { getPosts }
 )(Posts);
