@@ -7,7 +7,7 @@ import PostItem from '../posts/PostItem';
 import { getPost } from '../../actions/post';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
-  //match to get tie id from the URL
+  //match to get the id from the URL
   useEffect(() => {
     getPost(match.params.id);
   }, [getPost, match.params.id]);
