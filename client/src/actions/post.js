@@ -125,7 +125,8 @@ export const getPost = postId => async dispatch => {
 };
 
 //Add comment
-export const addComment = (formData, postId) => async dispatch => {
+export const addComment = (postId, formData) => async dispatch => {
+  //formData before postId doesn't work
   const config = {
     headers: {
       'Content-Type': 'application/json'
