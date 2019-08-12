@@ -69,7 +69,7 @@ export const deletePost = postId => async dispatch => {
 
     dispatch({
       type: DELETE_POST,
-      payload: postId
+      payload: postId //So we know which one to remove in the state
     });
 
     dispatch(setAlert('Post Removed', 'success'));
@@ -145,6 +145,25 @@ export const addComment = (formData, postId) => async dispatch => {
     });
 
     dispatch(setAlert('Comment Added', 'success'));
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+//Remove comment
+export const removeComment = (postId, commentId) => async dispatch => {
+  try {
+    await axios.delete(`/api/posts/comment/${postId}/${commentId}`); //We chose POST in back-end
+
+    dispatch({
+      type: REMOVE_COMMENT,
+      payload: commentId
+    });
+
+    dispatch(setAlert('Comment Deleted', 'success'));
   } catch (err) {
     dispatch({
       type: POST_ERROR,
