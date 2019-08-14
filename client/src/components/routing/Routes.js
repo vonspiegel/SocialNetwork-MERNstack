@@ -1,19 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Login from '../components/auth/Login';
-import Register from '../components/auth/Register';
-import Alert from '../components/layout/Alert';
-import Dashboard from '../components/dashboard/Dashboard';
-import CreateProfile from '../components/profile-form/CreateProfile';
-import EditProfile from '../components/profile-form/EditProfile';
-import AddExperience from '../components/profile-form/AddExperience';
-import AddEducation from '../components/profile-form/AddEducation';
-import Profiles from '../components/profiles/Profiles';
-import Profile from '../components/profile/Profile';
-import Posts from '../components/posts/Posts';
-import Post from '../components/post/Post';
-import NotFound from '../components/layout/NotFound';
-import PrivateRoute from '../components/routing/PrivateRoute';
+import Login from '../auth/Login';
+import Register from '../auth/Register';
+import Alert from '../layout/Alert';
+import Dashboard from '../dashboard/Dashboard';
+import CreateProfile from '../profile-form/CreateProfile';
+import EditProfile from '../profile-form/EditProfile';
+import AddExperience from '../profile-form/AddExperience';
+import AddEducation from '../profile-form/AddEducation';
+import Profiles from '../profiles/Profiles';
+import Profile from '../profile/Profile';
+import Posts from '../posts/Posts';
+import Post from '../post/Post';
+import NotFound from '../layout/NotFound';
+import PrivateRoute from '../routing/PrivateRoute';
 
 const Routes = () => {
   return (
